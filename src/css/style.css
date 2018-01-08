@@ -10,7 +10,7 @@ li{
 	list-style-type: none;
 }
 
-#page { 
+#page {
   width: 100%;
   min-width:968px;
   overflow: hidden;
@@ -24,8 +24,8 @@ h4 { font: normal 18px/18px 'Vollkorn', serif; letter-spacing: 0.05em; }
 
 
 /* Header contains the nav links and the map images. */
-header { 
-  width: 100%; 
+header {
+  width: 100%;
   margin-top: 50px;
   padding-bottom: 8px;
   position: relative;  /* so we can absolute position 'header .arrow' relative to the header */
@@ -36,7 +36,7 @@ header #offset {
     margin: 0 auto 20px auto;
 }
 
-header #links { 
+header #links {
   width: 520px;
   height: 44px;
   font-size:20px;
@@ -50,23 +50,15 @@ header #links {
   font-family: 'Vollkorn', serif;
 }
 
-header #links a { 
-  color: #6D7993; 
-  text-decoration: none; 
+header #links a {
+  color: #6D7993;
+  text-decoration: none;
 }
 
-#links a:hover, 
-#links a.hover,
-/* Highlight the link for the currently selected page. */
-body.about    #links .about    a,
-body.blog #links .blog a,
-body.resume  #links .resume  a,
-body.guides #links .guides a,
-body.other    #links .other    a {
+#links a:hover {
   color: #96858F;
   text-shadow: 0 0 1.45px #96858F;
 }
-
 
 #links #offstamp {
  margin-left: auto;
@@ -74,24 +66,29 @@ body.other    #links .other    a {
  width: 100px;
 }
 
+a:hover {
+  color: #96858F;
+  text-shadow: 0 0 1.45px #96858F;
+}
+
 /* Sets location of the links bar */
-#links ul { 
-  position: absolute; 
-  left: 5px; 
-  top: 8px; 
+#links ul {
+  position: absolute;
+  left: 5px;
+  top: 8px;
 
-  width: 100%; 
-  padding: 5px 0 0 0; 
-  margin: 0; 
+  width: 100%;
+  padding: 5px 0 0 0;
+  margin: 0;
 
-  z-index: 100; 
+  z-index: 100;
 }
 
 /* lines up the up top bar */
-#links .about, 
+#links .about,
 #links .resume { float: left; }
 #links .other,
-#links .guides, 
+#links .guides,
 #links .blog { float: right; }
 
 #links .resume { background-position: 0px 5px; }
@@ -102,7 +99,7 @@ body.other    #links .other    a {
 #links .resume { padding-left: 24px; }
 #links .blog   { padding: 0 14px 0 10px; }
 #links .guides { padding-left: 24px;padding-right:24px;}
-#links .other { padding-right: 20px; } 
+#links .other { padding-right: 20px; }
 
 .TheLife {
   border-left: 6px solid #9099A2;
@@ -142,7 +139,7 @@ body.other    #links .other    a {
   background-color: white;
   width: 200px;
   padding: 0px
-  
+
 }
 
 .content-area h1 {
@@ -151,13 +148,18 @@ body.other    #links .other    a {
 
 .content-area p{
 	align: left;
-	padding-left: 3px;
+	padding-left: 10px;
 }
 
 .EndPage{
 	color: #808080;
-	padding-top: 60px;
+	padding-top: 30px;
 	margin-left: 100px;
 }
 
+.TabBox{
+  border: 6px solid #9099A2;
+  width: 10px;
 
+  height: : 10px;
+}
