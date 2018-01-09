@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+  <title>Maxwell Dulin</title>
+
+  <link media="Screen" rel="stylesheet" type="text/css" href="../css/style.css" class="cssfx">
+
+<body class="blog">
+    <header>
+	<div id="offset">
+        <nav id="HomeBar">
+	  <div id="offstamp">
+
+	  </div>
+	  <!--
+		The toolbar at the top.
+		-->
+          <ul style = "font-family:Times New Roman ">
+            <li class="about"><a href="./About.html">About</a></li>
+            <li class="resume"><a href="./Resume.html">Resume</a></li>
+            <li class="blog"><a href= "./Blog.html">Blog</a></li>
+            <li class="other"><a href="./Projects.html">Projects</a></li>
+			<li class = "guides"><a href="./Guides.html">Guides</a> </li>
+          </ul>
+        </nav>
+	</div>
+	</header>
+
+
+	<div class="TheLife">
+	<h3>Projects:</h3>
+  <h2> <a href = "https://github.com/jacobkrantz/ProbSyllabifier" style > Probablastic Syllabifier:</a> </h2>
+  <p> <b> What: </b>A project dedicated to the categorization of transferring words into its syllables, across languages. This technique is cross language; currently only tested in English though. At the moment, the technique sits at a accuracy of 92% for the English language. But, we will be testing this on other languages and adding functionallity soon. </p>
+
+  <p><b> Technology Used: </b> Uses a first order Hidden Markov Model (HMM) in order to deduce the probabalities. In order to optimize the parameters for the categorization of the scheme, it uses a grouping genetic algorithm with a self created modified form stochastic universal sampling, a scattered crossover for children creation, and first-worst mating selection. Addiionally, the genetic algorithm contains a unique brute force optimizer for each unique phone per scheme. After some developments of a library for HMM usage, we hope to test the lookback data of the model to be a second, third or even fourth order HMM model. Which, in the end, could increase the accuracy.
+  </p>
+  <p> <b>Goal: </b> The goal of this project is to create a cross language syllabifier above 95-99%. With more additions to the algorithm and testing of schemes, we hope to let people have access to all of the information on this project to use and grow upon our knowledge. </p>
+
+  <p> <b>Previous Work:</b> Won an award for the best presentation at SIRC(Spokane Intercollegiate Research Conference).<br/>
+  Developed a system that was 92% accurate in the ARPABET language, with NIST as the golden standard. Switched to a form of IPA, known as DISC, because of the wide spread usage.
+   </p>
+
+   <h2> <a href = "https://mdulin2.github.io/GonzagaDodgeball/Information" > Othello A.I. </a> </h2>
+
+   <p> Built an artificial intelligence for the famous board game of Othello, also known as Reversi.</p>
+   <p>The A.I. that I built won the only tournament that it was placed into with flying colors. No game that it ever played was ever lower than twenty chips, with a total of 64 chips in the game. </p>
+   <p> <b>Strategy:</b> Even though the rules are quite simple by nature, it's extremely complicated to master. "A move consists of "outflanking" your opponent's disc(s), then flipping the outflanked disc(s) to your color. To outflank means to place a disc on the board so that your opponent's row (or rows) of disc(s) is bordered at each end by a disc of your colour."(1) are basically the only rules. After playing hundreds of games, listening to interviews of top players and reading through many, many research articles about it, I came to a few conclusions that helped the A.I.. </p>
+  <p>In the game, there are a few metrics that matter in the game. Chip count, mobility(measured by how many moves the player and opponent can make, given the move), stability, position on the board and the amount of corners captured. The A.I. that won the tournament took mobility very seriously, to the point where the opponent would constantly run out of moves. Secondly, the amount of corners. The A.I very seldomly gave up corners, which allowed for a domination of the edges. Lastly, it took stability and position much into consideration. In the end, I discovered that the amount of chips made no difference until the last 6 moves of the game, even though the goal of the game was to have as many chips as possible.</p>
+  <p><b>Search: </b> Besides the Strategy, the speed of each matters very much. The game implemented alpha-beta prunning over the search space, with a reordering best-first search. With a tree, that would on average take O(b^d), where b is the branching factor and d is the depth. Alpha-beta prunning turns it into O(b^d/2), or the square root of b^d, which is significantly faster. </p>
+
+  <h2> Hacking: </h2>
+  <p> I have only started my reign as a hacker in the previous 4 months, but have done so very fun and entertaining projects recently. Here are a couple:<br/>
+  <br/><a href = "https://github.com/maxchehab"> Max Chehab </a> and I found a vulnerbility in the Gonzaga Student Website. </p>
+
+  <p><b>Zagweb Vulnerbility:</b> The student service known as "GU Who's Who", which let students look up students had a picture that was viewable outside of being logged in. This picture had a uniqueID, that was incremental, and directly associated with the session ID of the user.
+  <p> The session ID was only 22 characters long, with the first half of the cookie being a six digit base 36 number. The other half of the cookie was a unique, incremental ID that could easily be scrapped. </p>
+  <p> A session ID is valid for a user for a half hour. The ID stays valid if the user closes out the tab or leaves it open, not if they log out however.
+  <p>To exploit, a victim is needed, which could even be the president of the school. Once a victim is picked, we know half of the session ID. Because the ID is only valid for a half hour, this is the amount of time that a user has, assuming that the user has just logged out. Then, the hacker can attempt to log onto the users account with a sessionID that is associated with a user. </p>
+  <p>The vulnerbility was reported to the school and fixed. The simple write up is below. <a href = "../../public/Ihateyou.docx">Write up </a>
+  </p>
+  <p><b> <a href = "https://github.com/Flaque/comp-security-project/tree/master/ClipboardInjections" > Microsoft Word Powershell Hack: </a> </b>
+  After hearing about CryptoSwapper, I felt like making my own, simpler copy of it. CryptoSwapper is a malware that alters the clipboard if it finds a Bitcoin address on it to the hackers. Simply though, I wanted to make a malware that would alter the clipboard if it found a particular value on it.
+  <p> In order to get it on the system, I used a Microsoft Word vulnerbility in the DDL protocol. If a user opens the project, then the word document will automatically launch whatever process or protocol is called, including opening powershell, which is what I did. </p>
+  <p> From there, powershell downloaded a powershell script and executed it. This script downloaded the malicious script that would evaluate the clipboard constantly, and change it if the criteria was met for it.</p>
+  <p> Currently, the download section of is not available. But, the code still runs the clipboard injection by executing the powershell script from the Microsoft Word file. To fix the download section, create a valid download path for the folder in the powershell script. </p>
+
+  <h2> <a href = "https://mdulin2.github.io/GonzagaDodgeball/Information" > Gonzaga Dodgeball: </a> </h2>
+  <p> A website for the Gonzaga Dodgeball team. Has player information, pictures, schedule information and etc. </p>
+
+  <h2> <a href = "https://mdulin2.github.io/GonzagaDodgeball/Information" > Pool Play Designer: </a> </h2>
+  I have run many wiffleball tournaments back in my hometown for the last ten years. Over the years, creating pool play brackets got very annoying and repetitve. So, I decided to make a text based program in order to do this for me. It's not the most functional piece of software in the world, but it does wonders in speeding of the process of making brackets. I probably won't expand upon this unless it is needed for my needs or someone needs a piece of software for it. But, it works for the purpose that it was designed for.
+
+  <p> If anybody has any questions about my projects here, please feel free to ask. I love discussing all of the projects above! My email, twitter and github are all above.
+  <p>  <br/><a href = "http://www.hannu.se/games/othello/rules.htm">(1) Othello Rules</a></p>
+
+
+</div>
+	<!--
+		This is the side bar at the edge.
+	-->
+	<aside id="info" class="content-area"><center>
+	<h1 title="Maxwell Dulin">Maxwell Dulin</h1>
+	<img class = "ProfileImage" src = "../../public/ProfilePic.jpg" style = "display: block;"/> </center>
+	&nbsp <i> <img src = "../../public/Github.png" width = "35px; display:block; padding-left: 3px;"/>
+	<a href = "https://github.com/mdulin2" style = "color: #96858F; font-style: italic padding-left: 50;text-decoration: none; "> mdulin2</a> <i/><br/>
+
+
+	&nbsp 	<img src = "../../public/twitter.png" width = "25px; display:block; padding-left: 3px;"/> @dooflin5
+	<br/>
+
+	&nbsp  <img src = "../../public/Mail.png" width = "25px; display:block; padding-left: 3px;"/> dulinmax@outlook.com </p>
+        </aside>
+      </aside>
+
+      <!--
+    		Copyright and inspirational quotes!
+    	-->
+
+	  <div id ="footer" class = "EndPage">
+	  &copy; 2018 Maxwell Dulin. <br/>
+	  Life is 10% what happens to us and 90% how we react to it.
+	  <br/>Doubt kills more dreams than failure ever will.  </div>
+	 </body>
+
+
+</html>

@@ -1,4 +1,26 @@
 
+.content-area h1 {
+	font-family
+}
+
+.content-area p{
+	align: left;
+	padding-left: 10px;
+}
+
+.EndPage{
+	color: #808080;
+	padding-top: 30px;
+	margin-left: 100px;
+}
+
+.TabBox{
+  border: 6px solid #9099A2;
+  width: 10px;
+
+  height: : 10px;
+}
+
 body {
   font: 100%/1.5em 'Nobile', sans-serif;
   color: #333;
@@ -10,25 +32,14 @@ li{
 	list-style-type: none;
 }
 
-#page {
-  width: 100%;
-  min-width:968px;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-h1 { font: normal 34px/36px 'Lato', sans-serif; color: #96858F;text-shadow: 0 0 1.45px #96858F; }
-h2 { font: normal 25px/22px 'Vollkorn', serif; letter-spacing: 0.05em; line-height: 26px;color: #96858F;text-shadow: 0 0 1.25px #96858F;}
-h3 { font: normal 30px/36px 'Vollkorn', serif; letter-spacing: 0.05em;color: #DCDCDC; margin-left: 40px;margin-top: 1px; }
-h4 { font: normal 18px/18px 'Vollkorn', serif; letter-spacing: 0.05em; }
 
 
-/* Header contains the nav links and the map images. */
+/* Move the HomeBar down some */
 header {
   width: 100%;
   margin-top: 50px;
   padding-bottom: 8px;
-  position: relative;  /* so we can absolute position 'header .arrow' relative to the header */
+  position: relative;
 }
 
 header #offset {
@@ -36,7 +47,8 @@ header #offset {
     margin: 0 auto 20px auto;
 }
 
-header #links {
+/*Basic coloring and set up of the bar */
+header #HomeBar {
   width: 520px;
   height: 44px;
   font-size:20px;
@@ -50,29 +62,43 @@ header #links {
   font-family: 'Vollkorn', serif;
 }
 
-header #links a {
+header #HomeBar a {
   color: #6D7993;
   text-decoration: none;
 }
 
-#links a:hover {
+#HomeBar a:hover {
   color: #96858F;
   text-shadow: 0 0 1.45px #96858F;
 }
 
-#links #offstamp {
+h2 a{
+  font: italic; 25px/22px 'Vollkorn', serif; letter-spacing: 0.05em; line-height: 26px;color: #6D7993;text-shadow: 0 0 1.25px #96858F;text-decoration: none;
+}
+
+p a{
+  font: italic; 25px/22px 'Vollkorn', serif; letter-spacing: 0.05em; line-height: 14px;color: #6D7993;text-shadow: 0 0 1.25px #96858F;text-decoration: none;
+
+}
+
+#HomeBar #offstamp {
  margin-left: auto;
  margin-right: auto;
  width: 100px;
 }
+
+h1 { font: normal 34px/36px 'Lato', sans-serif; color: #96858F;text-shadow: 0 0 1.45px #96858F; }
+h2 { font: normal 25px/22px 'Vollkorn', serif; letter-spacing: 0.05em; line-height: 26px;color: #96858F;text-shadow: 0 0 1.25px #96858F;}
+h3 { font: normal 30px/36px 'Vollkorn', serif; letter-spacing: 0.05em;color: #DCDCDC; margin-left: 40px;margin-top: 1px; }
+
 
 a:hover {
   color: #96858F;
   text-shadow: 0 0 1.45px #96858F;
 }
 
-/* Sets location of the links bar */
-#links ul {
+/* Sets location of the HomeBar bar */
+#HomeBar ul {
   position: absolute;
   left: 5px;
   top: 8px;
@@ -85,21 +111,21 @@ a:hover {
 }
 
 /* lines up the up top bar */
-#links .about,
-#links .resume { float: left; }
-#links .other,
-#links .guides,
-#links .blog { float: right; }
+#HomeBar .about,
+#HomeBar .resume { float: left; }
+#HomeBar .other,
+#HomeBar .guides,
+#HomeBar .blog { float: right; }
 
-#links .resume { background-position: 0px 5px; }
-#links .other  { background-position: left 5px; }
-#links .blog { background-position: left 5px; }
+#HomeBar .resume { background-position: 0px 5px; }
+#HomeBar .other  { background-position: left 5px; }
+#HomeBar .blog { background-position: left 5px; }
 
-#links .about    { padding: 0 10px 0 14px; }
-#links .resume { padding-left: 24px; }
-#links .blog   { padding: 0 14px 0 10px; }
-#links .guides { padding-left: 24px;padding-right:24px;}
-#links .other { padding-right: 20px; }
+#HomeBar .about    { padding: 0 10px 0 14px; }
+#HomeBar .resume { padding-left: 24px; }
+#HomeBar .blog   { padding: 0 14px 0 10px; }
+#HomeBar .guides { padding-left: 24px;padding-right:24px;}
+#HomeBar .other { padding-right: 20px; }
 
 .TheLife {
   border-left: 6px solid #9099A2;
@@ -140,26 +166,4 @@ a:hover {
   width: 200px;
   padding: 0px
 
-}
-
-.content-area h1 {
-	font-family
-}
-
-.content-area p{
-	align: left;
-	padding-left: 10px;
-}
-
-.EndPage{
-	color: #808080;
-	padding-top: 30px;
-	margin-left: 100px;
-}
-
-.TabBox{
-  border: 6px solid #9099A2;
-  width: 10px;
-
-  height: : 10px;
 }
