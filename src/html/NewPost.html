@@ -36,24 +36,28 @@
 
 
 	<div class="TheLife" id = "content">
-	<h3>Blog</h3>
+	<h3>Create Post</h3>
   <p>
-    <!--
-      WILL NEED AN ADMIN PANE HERE!
-    <script>
-    var user = prompt("Please enter username:", "");
-    var password = prompt("Please enter a password","");
-    if(user == "mdulin2" && password == 11){
+  <form action = "handle" method = "post">
+    <div>
+        <label for="title" style = "height:400%;">Title:</label>
+        <input type="text" id="Title" name="title">
+    </div>
+    <div>
+        <label for="date">Date:</label>
+        <input type="text" id="Date" name="date">
+    </div>
 
-    }
-    </script>
-    -->
-    
-    <p style = "position: absolute; top: 180px; left:630px; "> +<a href = "./NewPost.html">Add New Post</a></p>
-    <script language = "javascript">
-    const blog = new BlogPosts();
-    blog.displayPosts();
-    </script>
+    <div>
+        <label for="information">Blog Post:</label>
+        <textarea rows="100" cols="92.75%">
+      Enter the blog post here!
+        </textarea>
+    </div>
+    <div class="button">
+      <button type="submit">Submit the post!</button>
+    </div>
+  </form>
   </p>
 	</div>
 

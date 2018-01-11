@@ -32,7 +32,9 @@ li{
 	list-style-type: none;
 }
 
-
+p li{
+list-style-type:circle;
+}
 
 /* Move the HomeBar down some */
 header {
@@ -66,7 +68,9 @@ header #HomeBar a {
   color: #6D7993;
   text-decoration: none;
 }
-
+hr {
+	border-top: 4px solid #9099A2;
+}
 #HomeBar a:hover {
   color: #96858F;
   text-shadow: 0 0 1.45px #96858F;
@@ -78,8 +82,20 @@ h2 a{
 
 p a{
   font: italic; 25px/22px 'Vollkorn', serif; letter-spacing: 0.05em; line-height: 14px;color: #6D7993;text-shadow: 0 0 1.25px #96858F;text-decoration: none;
-
 }
+p a:hover{
+	color: #9099A2;;
+	text-shadow: 0 0 1.45px #96858F;
+}
+
+.BlogArticle a:hover{
+	color: #96858F;
+	text-shadow: 0 0 1.45px #96858F;
+}
+.BlogArticle a:link{
+	font: italic; 25px/22px 'Vollkorn', serif; letter-spacing: 0.05em;color:blue; line-height: 14px;text-shadow: 0 0 1.25px #96858F;text-decoration: none;
+}
+
 
 #HomeBar #offstamp {
  margin-left: auto;
@@ -167,3 +183,32 @@ a:hover {
   padding: 0px
 
 }
+
+.BackButton{
+	color: green;
+	font-size: 150%;
+	font: normal 'Lato', sans-serif; color: #6D7993;
+}
+
+.Date{
+	font: normal 'Lato', sans-serif; color: #6D7993;
+	font-size: 60%;
+}
+
+.inputField{
+	width:95%;
+}
+
+input[type=text], select {
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* https://www.canva.com/learn/website-color-schemes/ These people are awesome!
+I love the color schemes on here! */
