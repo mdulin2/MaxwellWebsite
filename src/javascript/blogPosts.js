@@ -125,6 +125,16 @@ class BlogPosts{
       return posts;
     }
 
-  /* This will post all of the blog posts that I want it to. */
 
+  /* This will post all of the blog posts that I want it to. */
+	get_info(){
+		var request = new XMLHttpRequest();
+		var url = "http://127.0.0.1:3306/";
+		request.open('GET',url);
+		console.log(url);
+	}
+	
 }
+
+
+
